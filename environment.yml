@@ -1,0 +1,12 @@
+# conda env create -f environment.yml && conda activate pathguard
+name: pathguard
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - pytest>=8
+  # only needed to build the cohort arrays from a graph
+  - bcftools>=1.19
+  - htslib>=1.19
