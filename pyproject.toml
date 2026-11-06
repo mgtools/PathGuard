@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathguard"
+version = "1.0.0"
+description = "Privacy-preserving release of a genome path against a public pangenome graph"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Dylan Smith", email = "ds85@iu.edu" },
+    { name = "Yuzhen Ye" },
+    { name = "Haixu Tang" },
+]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+pathguard = "pathguard.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mgtools/PathGuard"
+
+[tool.setuptools]
+packages = ["pathguard"]

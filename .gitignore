@@ -1,0 +1,15 @@
+# Genomes are never committed: data/ holds the graph, the cohort arrays, the
+# target projections and the releases.
+/data
+/external
+/results
+/logs
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+/work
