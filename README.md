@@ -388,8 +388,7 @@ environment, PLINK and Beagle.
 
 ### Cost
 
-Measured on a 48-core workstation with several of these running at once, so a
-quiet machine should be faster:
+Measured on a 48-core workstation with several of these running at once:
 
 | step | workers | wall time |
 | --- | --- | --- |
@@ -400,14 +399,6 @@ quiet machine should be faster:
 | `utility.py`, 44 cohort members, Table 5 | 20 | 4 min |
 | `release.py`, one member, 7 ceilings | 7 | 2 min |
 | `tau_regime.py`, 22 autosomes, Tables 2 and 3 | 11 | 45 min |
-
-The genome-wide runs are the expensive ones: the external-target tilts over 22
-autosomes take a couple of hours and the genome-wide utility sweep several more.
-The attack tables are the long pole — 7,000 trials, each drawing five releases of
-chromosome 21 — and from a measured 14-trial slice, budget the better part of a
-day for each of the two runs. Building the cohort arrays for all 22 autosomes is
-an overnight job, most of it `vg deconstruct`. The PanMixer comparison is roughly
-a day, most of it Beagle and the linkage evaluators.
 
 ## Layout
 
